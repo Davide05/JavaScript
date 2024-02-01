@@ -11,18 +11,22 @@
     <script>
         //crea l'oggetto
         let persona= {
-            nome: NULL,
-            cognome:NULL,
-            eta:NULL
+            nome: null,
+            cognome: null,
+            eta: 0
         }
-        
+
         //Chiede all'utente il nome, cognome e l'eta della persona
         let nome= prompt("Inserisci il nome:");
         let cognome= prompt("Inserisci il cognome:");
         let eta= prompt("Inserisci l'eta:");
 
+        persona.nome = nome;
+        persona.cognome = cognome;
+        persona.eta = eta
+
         //Stampa su console l’oggetto e il suo contenuto .
-        console.log("");
-    </script>
+        console.log(persona.nome + " " + persona.cognome + " ha " +persona.eta);
+    </script> 
 </body>
 </html>

@@ -1,17 +1,58 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calcolo del volume del Box</title>
+    <title>Calcolatrice</title>
 </head>
 <body>
     <h3>Per vedere il risultato sulla console premere: (Ctlr + Shift + I)</h3>
     <br>
-    <h4>Scrivere una semplice applicazione calcolatrice.</h4>
+    <h4>E'una semplice applicazione di calcolatrice.</h4>
     <script>
-        
+        let x=0;
+        let numero1;
+        let numero2;
+        let operazioni;
+        do //acquisisco i due numeri
+        {
+            numero1 = parseInt(prompt("inseri un numero1"));
+            numero2 = parseInt(prompt("inseri un numero2"));
+            if(Number.isNaN(numero1)||Number.isNaN(numero2))
+                console.log("uno dei valori inseriti non è un numero!");
+            else
+                x=1;
+        } while(x==0)
+
+        do 
+        {
+            operazioni = prompt("inseri tra +, -, *, /, ** questi operazioni");
+            switch(operazioni)
+            {
+                case "+":
+                    console.log("addizione");
+                    console.log(numero1 + "+" + numero2 +"=" + (numero1+numero2));
+                break;
+                case "-":
+                    console.log("sottrazione");
+                    console.log(numero1 + "-" + numero2 +"=" + (numero1-numero2));
+                break;
+                case "*":
+                    console.log("moltiplicazione");
+                    console.log(numero1 + "*" + numero2 +"=" + (numero1*numero2));
+                break;
+                case "/":
+                    console.log("divizione");
+                    console.log(numero1 + "/" + numero2 +"=" + (numero1/numero2));
+                break;
+                case "**":
+                    console.log("potenza");
+                    console.log(numero1 + "**" + numero2 +"=" + (numero1**numero2));
+                break;
+                default:
+                    console.log("valore non è correto!");
+                    operazioni=0;
+                break;
+            }
+        }while(operazioni==0);
     </script>
 </body>
 </html>

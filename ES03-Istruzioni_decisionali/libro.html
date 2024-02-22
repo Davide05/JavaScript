@@ -4,14 +4,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calcolo del volume del Box</title>
+    <title>Libro</title>
 </head>
 <body>
     <h3>Per vedere il risultato sulla console premere: (Ctlr + Shift + I)</h3>
     <br>
     <h4>Rappresenta un libro con il: Titolo, Autore, Anno di pubblicazione, Genere, Numero di pagine</h4>
     <script>
-        
+        //Creo un oggetto
+        let libro = {
+            Titolo:"La Bibbia",
+            Autore:"Dio",
+            Anno_pubblicazione:"1453",
+            Genere:"Religioso",
+            Numero_pagine:"1300-1600 pagine"
+        }
+        for (let chiave in libro) {
+            console.log(chiave + ": " + libro[chiave]);
+        }
     </script>
 </body>
 </html>

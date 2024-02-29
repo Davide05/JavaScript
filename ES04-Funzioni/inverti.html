@@ -8,11 +8,25 @@
     <br>
     <h4>Inverte l'ordine dei numeri</h4>
     <script>
-        console.log("User Agent:", navigator.userAgent);
-        console.log("Platform:", navigator.platform);
-        console.log("Preferred Language:", navigator.language);
-        console.log("Cookies Enabled:", navigator.cookieEnabled);
-        console.log("Online Status:", navigator.onLine);
+        let x;
+        do //acquisisco i due numeri
+        {
+            x=parseInt(prompt("inserisci un numero intero"));
+            if(Number.isNaN(x))
+                console.log("uno dei valori inseriti non è un numero!");
+        } while(Number.isNaN(x))
+        console.log(x);
+        const inverti_cifre = function(a)
+        {
+            let y = "";
+            a=a+"";
+            for(let x of a)
+            {
+                y=x+y;
+            }
+            return y;
+        }
+        console.log(inverti_cifre(x));
     </script>
 </body>
 </html>
